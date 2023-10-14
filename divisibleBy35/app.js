@@ -1,5 +1,11 @@
+// Here we pull in the module so we can refer to in a more 
+// shorthand way, rather than process.argv every time
 const {  argv } = require('node:process');
 
+// Node includes the complete command line in argv, so for example the model is:
+// node app.js argv[2] argv[3]
+// where argv[0] is node and argv[1] is app.js
+// Compare this to app.rb in this same directory to see how other languages do this differently
 let lowNumber = parseInt(argv[2]);
 let highNumber = parseInt(argv[3]);
 
