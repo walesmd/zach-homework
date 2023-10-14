@@ -1,6 +1,5 @@
 const {  argv } = require('node:process');
 
-
 const firstParam = parseInt(argv[2]);
 const secondParam = parseInt(argv[3]);
 
@@ -20,7 +19,6 @@ if (highNumber < lowNumber) {
     [lowNumber, highNumber] = [highNumber, lowNumber]
 }
 
-const spreadNumbers = [];
 // Make an array of the numbers between low and high
 for (var i = lowNumber; i <= highNumber; i++) {
     if (number % 3 == 0) {
