@@ -16,7 +16,7 @@ if (lowNumber > highNumber) {
 }
 
 // Make an array of the numbers between low and high
-for (var i = lowNumber; i <= highNumber; i++) {
+for (let i = lowNumber; i <= highNumber; i++) {
     if (i % 3 == 0) {
         console.log(`${i} is divisible by 3.`);
         totalDivisibleBy3++;
