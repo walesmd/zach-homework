@@ -1,7 +1,7 @@
 const {  argv } = require('node:process');
 
-const firstParam = parseInt(argv[2]);
-const secondParam = parseInt(argv[3]);
+let lowNumber = parseInt(argv[2]);
+let highNumber = parseInt(argv[3]);
 
 // Area for improvement, make the 3 & 5 not magic numbers here
 // Could probably store all the divisors you care about in an array
@@ -10,24 +10,20 @@ const secondParam = parseInt(argv[3]);
 let totalDivisibleBy3 = 0;
 let totalDivisibleBy5 = 0;
 
-// Assume the user put the low number first
-let lowNumber = firstParam;
-let highNumber = secondParam;
-
-if (highNumber < lowNumber) {
+if (lowNumber > highNumber) {
     // The second param was lower, swap them
     [lowNumber, highNumber] = [highNumber, lowNumber]
 }
 
 // Make an array of the numbers between low and high
 for (var i = lowNumber; i <= highNumber; i++) {
-    if (number % 3 == 0) {
-        console.log(`${number} is divisible by 3.`);
+    if (i % 3 == 0) {
+        console.log(`${i} is divisible by 3.`);
         totalDivisibleBy3++;
     }
 
-    if (number %5 == 0) {
-        console.log(`${number} is divisible by 5.`);
+    if (i %5 == 0) {
+        console.log(`${i} is divisible by 5.`);
         totalDivisibleBy5++;
     }
 };
