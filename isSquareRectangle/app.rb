@@ -5,13 +5,6 @@
 width = ARGV[0].to_i
 height = ARGV[1].to_i
 
-
-if width == height
-    puts "This is a square"
-else
-    puts "This is a rectangle"
-end
-
 puts "Starting the clock on 2 separate loops..."
 startingTime = Time.now.to_i
 printScrn = []
@@ -25,19 +18,23 @@ end
 endingTime = Time.now.to_i
 smallLoopExecution = endingTime - startingTime
 
-puts "Starting the clock on loop in a loop..."
-startingTime = Time.now.to_i
+# puts "Starting the clock on loop in a loop..."
+# startingTime = Time.now.to_i
 
-(0..width).each do |x|
-    (0..height).each do |y|
-        print "x"
-    end
+# (0..width).each do |x|
+#     (0..height).each do |y|
+#         print "x"
+#     end
 
-    puts ""
+#     puts ""
+# end
+# endingTime = Time.now.to_i
+# largeLoopExecution = endingTime - startingTime
+
+if width == height
+    puts "This is a square"
+else
+    puts "This is a rectangle"
 end
-endingTime = Time.now.to_i
-largeLoopExecution = endingTime - startingTime
-
-
 puts "Small Loop: #{smallLoopExecution}"
-puts "Large Loop: #{largeLoopExecution}"
+# puts "Large Loop: #{largeLoopExecution}"
