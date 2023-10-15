@@ -1,3 +1,16 @@
+# In Ruby we can modify pre-existing classes, this is called "monkey patching"
+# Here, we'll add a divisibleBy() method to the Integer class so we can do things like:
+# 15.divisibleBy(3)
+class Integer
+    def divisibleBy(num)
+        # In Ruby, you don't have to explicitly return a value
+        # The last statement will be returned.
+        # In this line, "self" is the value of the Integer to the left of the dot
+        # 3.divisibleBy 15 - self would equal 3, num equals 15
+        self % num == 0
+    end
+end
+
 # We can grab command line arguments from the ARGV array, notably
 # Ruby does not include the initial command in this array, so this is the model:
 # -- ruby app.rb ARVG[0] ARVG[1]
@@ -27,8 +40,9 @@ end
 # implemented using a for (i = low, i <= high, i++) style loop.
 # The .. operator basically shorthands that for loop.
 (lowNumber..highNumber).each do |num|
-    totalDivBy3 += 1 if num % 3 == 0
-    totalDivBy5 += 1 if num % 5 == 0
+    # In Ruby, if a method only accepts a single parameter, you don't need ()s
+    totalDivBy3 += 1 if num.divisibleBy 3
+    totalDivBy5 += 1 if num.divisibleBy 5
     # ^ Magic number alert here w/ 3 and 5,
     # real world I'd probably make the divisor 
     # we care about an array that is configured at the top
