@@ -1,8 +1,6 @@
 # This example is provided to show how looping within a loop in non-performant
-# If you can break it out into separate loops. Printing to the screen is negligible
-# so those lines are commented out.
+# If you can break it out into separate loops.
 # Recommend running ruby app.rb 20000 20000 and seeing the results
-# 0 seconds and 12 seconds on my local machine
 
 width = ARGV[0].to_i
 height = ARGV[1].to_i
