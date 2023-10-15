@@ -2,12 +2,12 @@
 # Here, we'll add a divisibleBy() method to the Integer class so we can do things like:
 # 15.divisibleBy(3)
 class Integer
-    def divisibleBy(num)
+    def isEven
         # In Ruby, you don't have to explicitly return a value
         # The last statement will be returned.
         # In this line, "self" is the value of the Integer to the left of the dot
         # 3.divisibleBy 15 - self would equal 3, num equals 15
-        self % num == 0
+        self % 2 == 0
     end
 end
 
@@ -41,7 +41,7 @@ end
 # The .. operator basically shorthands that for loop.
 (lowNumber..highNumber).each do |num|
     # In Ruby, if a method only accepts a single parameter, you don't need ()s
-    if num.divisibleBy 2
+    if num.isEven
         totalEvens += num
     else
         totalOdds += num
