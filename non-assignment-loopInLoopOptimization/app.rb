@@ -18,25 +18,28 @@ puts "Starting the clock on 2 separate loops..."
 startingTime = Time.now.to_i
 printScrn = []
 (0..height).each do |x|
-    # printScrn.append("x" * width)
+    printScrn.append("x" * width)
 end
 
 printScrn.each do |line|
-    # puts line
+    puts line
 end
 endingTime = Time.now.to_i
-puts "Execution time was on 2 separate loops was... #{endingTime - startingTime}"
-
+smallLoopExecution = endingTime - startingTime
 
 puts "Starting the clock on loop in a loop..."
 startingTime = Time.now.to_i
 
 (0..width).each do |x|
     (0..height).each do |y|
-        # print "x"
+        print "x"
     end
 
-    # puts ""
+    puts ""
 end
 endingTime = Time.now.to_i
-puts "Execution time on loop in a loop was... #{endingTime - startingTime}"
+largeLoopExecution = endingTime - startingTime
+
+
+puts "Small Loop: #{smallLoopExecution}"
+puts "Large Loop: #{largeLoopExecution}"
